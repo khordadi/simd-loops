@@ -90,7 +90,7 @@ endif
 # MMLA optional feature flags
 HAVE_MMLA    ?= 0
 ifeq ($(HAVE_MMLA),1)
-EXTRA_FLAGS  := $(EXTRA_FLAGS) -D__ARM_FEATURE_SVE_MATMUL_FP32 -D__ARM_FEATURE_SVE_MATMUL_INT8
+EXTRA_FLAGS  += -D__ARM_FEATURE_SVE_MATMUL_FP32 -D__ARM_FEATURE_SVE_MATMUL_INT8
 MARCH_NEON   := $(MARCH_NEON)+i8mm
 MARCH_SVE2   := $(MARCH_SVE2)+f32mm+i8mm
 MARCH_SME2   := $(MARCH_SVE2)$(MARCH_SME2)
@@ -99,7 +99,7 @@ endif
 # LUT optional feature flags
 HAVE_LUT    ?= 0
 ifeq ($(HAVE_LUT),1)
-EXTRA_FLAGS  := $(EXTRA_FLAGS) -D__ARM_FEATURE_LUT
+EXTRA_FLAGS  += -D__ARM_FEATURE_LUT
 MARCH_NEON   := $(MARCH_NEON)+lut
 MARCH_SVE2   := $(MARCH_SVE2)+lut
 MARCH_SME2   := $(MARCH_SVE2)$(MARCH_SME2)
@@ -107,7 +107,7 @@ endif
 
 # Optional autovec using histcnt
 ifeq ($(ENABLE_AUTOVEC_HISTCNT),1)
-EXTRA_FLAGS  := $(EXTRA_FLAGS) -mllvm -enable-histogram-loop-vectorization
+EXTRA_FLAGS  += -mllvm -enable-histogram-loop-vectorization
 endif
 
 # 16b float feature flags
