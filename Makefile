@@ -231,7 +231,7 @@ $$(BUILDDIR_$7):
 $$(OBJS_$7) $$(EXTRA_OBJS_$7): $$(BUILDDIR_$7)/_obj/%.o: %.c | $$(BUILDDIR_$7)
 	@mkdir -p $$(dir $$@)
 	$$(C_COMPILER_$7) $$(IFLAGS) $$(CFLAGS_$8) $$(EXTRA_CFLAGS_$7) -DMAX_GLOBAL_MEMORY_KIB=$(MAX_MEMORY_KIB) -DPROBLEM_SIZE_LIMIT_KIB=$(PROBLEM_SIZE_LIMIT_KIB) -DMAX_VL=$(MAX_VL) -c $$< -o $$@
-	ln -s $$@ $$(BUILDDIR_$7)/_obj/_lnk/$$(@F)
+	ln -fs $$@ $$(BUILDDIR_$7)/_obj/_lnk/$$(@F)
 
 $$(BUILDDIR_$7)/bin/simd_loops: $$(EXTRA3_OBJS_$7) $$(OBJS_$7) $$(EXTRA_OBJS_$7) $$(EXTRA2_OBJS_$7)
 	$$(C_LINKER_$7) -o $$@ $$(LDFLAGS_$7) $$^ $$(LDLIBS_$7)

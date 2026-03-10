@@ -1,0 +1,302 @@
+[
+ {
+  "id": 1,
+  "name": "FP32 inner product",
+  "purpose": "Use of fp32 MLA instruction"
+ },
+ {
+  "id": 2,
+  "name": "UINT32 inner product",
+  "purpose": "Use of u32 MLA instruction"
+ },
+ {
+  "id": 3,
+  "name": "FP64 inner product",
+  "purpose": "Use of fp64 MLA instruction"
+ },
+ {
+  "id": 4,
+  "name": "UINT64 inner product",
+  "purpose": "Use of u64 MLA instruction"
+ },
+ {
+  "id": 5,
+  "name": "strlen short strings",
+  "purpose": "Use of FF and NF loads instructions"
+ },
+ {
+  "id": 6,
+  "name": "strlen long strings",
+  "purpose": "Use of FF and NF loads instructions"
+ },
+ {
+  "id": 8,
+  "name": "Precise fp64 add reduction",
+  "purpose": "Use of FADDA instructions"
+ },
+ {
+  "id": 9,
+  "name": "Pointer chasing",
+  "purpose": "Use of CTERM and BRK instructions"
+ },
+ {
+  "id": 10,
+  "name": "Conditional reduction (fp)",
+  "purpose": "Use of CLAST (SIMD&FP scalar) instructions"
+ },
+ {
+  "id": 19,
+  "name": "Mark objects",
+  "purpose": "Use of scatters store instruction"
+ },
+ {
+  "id": 22,
+  "name": "TCP checksum",
+  "purpose": "Use of simd instructions for misaligned accesses"
+ },
+ {
+  "id": 23,
+  "name": "Conjugate Gradient",
+  "purpose": "Use of gathers load instruction"
+ },
+ {
+  "id": 24,
+  "name": "Sum of abs diffs",
+  "purpose": "Use of DOT instruction"
+ },
+ {
+  "id": 25,
+  "name": "FP32 small matrix-matrix multiply",
+  "purpose": "Use of fp32 indexed MLA instruction"
+ },
+ {
+  "id": 26,
+  "name": "Convert UTF-16 to chars",
+  "purpose": "Use of gathers load instruction"
+ },
+ {
+  "id": 27,
+  "name": "FP32 square root",
+  "purpose": "Use of FSQRT instruction"
+ },
+ {
+  "id": 28,
+  "name": "FP64 fast division",
+  "purpose": "Use of FRECPE and FRECPS instructions"
+ },
+ {
+  "id": 29,
+  "name": "FP64 multiply by power of 2",
+  "purpose": "Use of FSCALE instruction"
+ },
+ {
+  "id": 31,
+  "name": "small-lengths inline memcpy test",
+  "purpose": "Use of simd-based memcpy for small lengths and at varied alignments"
+ },
+ {
+  "id": 32,
+  "name": "FP64 banded linear equations",
+  "purpose": "Use of strided gather and INC instructions"
+ },
+ {
+  "id": 33,
+  "name": "FP64 Inner product",
+  "purpose": "Use of a tight loop with INC and WHILE instructions"
+ },
+ {
+  "id": 34,
+  "name": "Short string compares",
+  "purpose": "Use of FFR for strcmp"
+ },
+ {
+  "id": 35,
+  "name": "Array addition",
+  "purpose": "Use of WHILE for loop control"
+ },
+ {
+  "id": 36,
+  "name": "Sparse matrix Gauss Step",
+  "purpose": "Use of gather-based matrix processing"
+ },
+ {
+  "id": 37,
+  "name": "FP32 complex vector product",
+  "purpose": "Use of fp32 FCMLA instruction"
+ },
+ {
+  "id": 38,
+  "name": "Fp16 convolution",
+  "purpose": "Use of fp16 multiply-add instructions"
+ },
+ {
+  "id": 40,
+  "name": "Clamp operation",
+  "purpose": "Use of simd clamp (or min, max and shift) instructions"
+ },
+ {
+  "id": 101,
+  "name": "Upscale filter",
+  "purpose": "Use of top/bottom instructions"
+ },
+ {
+  "id": 102,
+  "name": "General histogram",
+  "purpose": "Use of HISTCNT instruction"
+ },
+ {
+  "id": 103,
+  "name": "whitespace",
+  "purpose": "Use of MATCH and NMATCH instructions"
+ },
+ {
+  "id": 105,
+  "name": "Cascade summation",
+  "purpose": "Use of pairwise FP add instruction"
+ },
+ {
+  "id": 108,
+  "name": "Pixel manipulation",
+  "purpose": "Use of LD4 with shift-accumulate instructions"
+ },
+ {
+  "id": 109,
+  "name": "UINT32 complex addition",
+  "purpose": "Use of u32 CADD instruction"
+ },
+ {
+  "id": 110,
+  "name": "UINT32 complex dot",
+  "purpose": "Use of u32 CDOT instruction"
+ },
+ {
+  "id": 111,
+  "name": "FP64 overflow handling",
+  "purpose": "Use of FLOGB and FSCALE instructions"
+ },
+ {
+  "id": 112,
+  "name": "UINT32 complex MAC",
+  "purpose": "Use of CMLA instruction"
+ },
+ {
+  "id": 113,
+  "name": "UINT32 Pairs addition",
+  "purpose": "Use of u32 ADDP"
+ },
+ {
+  "id": 114,
+  "name": "Auto-correlation",
+  "purpose": "Use of shifts, widening mult and load-replicate instructions"
+ },
+ {
+  "id": 126,
+  "name": "conditional update",
+  "purpose": "Use of simd loop with conditional update"
+ },
+ {
+  "id": 130,
+  "name": "FP32 matrix-matrix multiply using",
+  "purpose": "Use of fp32 MMLA instructions"
+ },
+ {
+  "id": 137,
+  "name": "BF16-FP32 matrix-matrix multiply using MMLA",
+  "purpose": "Use of bf16 to fp32 MMLA instructions"
+ },
+ {
+  "id": 201,
+  "name": "FP64 matrix-matrix multiply using MOPA / DOT",
+  "purpose": "Use of fp64 MOPA (or MLA) instructions"
+ },
+ {
+  "id": 202,
+  "name": "FP32 matrix-matrix multiply using MOPA / DOT",
+  "purpose": "Use of fp32 MOPA (or MLA) instructions"
+ },
+ {
+  "id": 204,
+  "name": "FP16 matrix-matrix multiply using MOPA / DOT",
+  "purpose": "Use of fp16 to fp16 MOPA (or MLA) instructions"
+ },
+ {
+  "id": 205,
+  "name": "INT8-INT32 matrix-matrix multiply using MOPA / DOT",
+  "purpose": "Use of i8 to i32 MOPA (or DOT) instructions"
+ },
+ {
+  "id": 206,
+  "name": "INT16-INT64 matrix-matrix multiply using MOPA / DOT",
+  "purpose": "Use of i16 to i64 MOPA (or DOT) instructions"
+ },
+ {
+  "id": 210,
+  "name": "BF16-FP32 matrix-matrix multiply using MOPA / DOT",
+  "purpose": "Use of bf16 to fp32 MOPA (or DOT) instructions"
+ },
+ {
+  "id": 211,
+  "name": "INT16-INT32 matrix-matrix multiply using MOPA / DOT",
+  "purpose": "Use of i16 to i32 MOPA (or DOT) instructions"
+ },
+ {
+  "id": 212,
+  "name": "4-bit-FP32 col-major interleaved matrix-vector multiply",
+  "purpose": "Use of 4-bit dequantization (LUT) and DOT instructions"
+ },
+ {
+  "id": 215,
+  "name": "UINT8-UINT32 col-major interleaved matrix-vector multiply",
+  "purpose": "Use of u8 to u32 DOT instruction"
+ },
+ {
+  "id": 216,
+  "name": "FP32 col-major matrix-vector multiply",
+  "purpose": "Use of fp32 MLA instruction"
+ },
+ {
+  "id": 217,
+  "name": "INT8-INT32 row-major matrix-vector multiply",
+  "purpose": "Use of i8 to i32 DOT and ADDV instructions"
+ },
+ {
+  "id": 218,
+  "name": "FP64 col-major matrix-vector multiply",
+  "purpose": "Use of fp64 MLA instruction"
+ },
+ {
+  "id": 219,
+  "name": "INT8-INT32 col-major matrix-vector multiply",
+  "purpose": "Use of i8 to i32 VDOT instruction"
+ },
+ {
+  "id": 220,
+  "name": "FP32 row-major matrix-vector multiply",
+  "purpose": "Use of fp32 MLA and ADDV instructions"
+ },
+ {
+  "id": 221,
+  "name": "FP64 row-major matrix-vector multiply",
+  "purpose": "Use of fp64 MLA and ADDV instructions"
+ },
+ {
+  "id": 222,
+  "name": "FP16 convolution",
+  "purpose": "Use of mutli-vector LD and f16 MLA instructions"
+ },
+ {
+  "id": 223,
+  "name": "Matrix transposition",
+  "purpose": "Use of simd instructions (LD & ST ZA, LD & ZIP) in transposition"
+ },
+ {
+  "id": 231,
+  "name": "BF16-FP32 col-major interleaved matrix-vector multiply",
+  "purpose": "Use of bf16 to fp32 DOT instruction"
+ },
+ {
+  "id": 245,
+  "name": "INT8-INT32 matrix-matrix multiply with rearrangement",
+  "purpose": "Use of MOPA, DOT & MMLA instructions with matrix rearrangements"
+ }
+]
